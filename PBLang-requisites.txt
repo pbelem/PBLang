@@ -1,0 +1,9 @@
+programa      → declaração* comando*
+declaração    → 'var' ID ':' tipo ';'
+tipo          → 'int' | 'bool'
+comando       → atribuição | if | while | print
+expressão     → lógica ('&&' | '||') → relacional → aditiva (+, -) → multiplicativa (*, /, %) → unário (!) → primário
+primário      → INTEIRO | 'true' | 'false' | ID | '(' expressão ')'
+escopo        → delimitadores de bloco { ... }
+operadores relacionais  →  >, <, >=, <=, == e !=
+comentários   → //
