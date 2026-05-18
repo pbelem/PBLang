@@ -1,0 +1,8 @@
+[package]
+name = "PBLang"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "master", version = "0.9.0", features = ["llvm18-1"] }
+logos = "0.16.1"
