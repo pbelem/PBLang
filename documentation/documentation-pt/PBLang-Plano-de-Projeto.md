@@ -1,8 +1,9 @@
 # PBLang — Compilador em Rust
 ## Documento de Requisitos e Plano de Projeto
 
-**Aluno:** [Seu Nome]  
-**Disciplina:** Teoria de Linguagens Formais e Autômatos  
+**Aluno:** [Pedro Belém]  
+**Disciplina:** Compiladores 
+**Professora:** [Sheila Tirony]
 **Início:** 18/05/2026 · **Entrega:** 08/06/2026 · **Duração:** 21 dias
 
 ---
@@ -48,7 +49,7 @@ comentários       → '//' até o fim da linha
 
 | Categoria | Exemplos |
 |---|---|
-| Palavras reservadas | `var`, `int`, `bool`, `true`, `false`, `if`, `else`, `while`, `print`, `read` |
+| Palavras reservadas | `int`, `bool`, `true`, `false`, `if`, `else`, `while`, `print`, `read` |
 | Identificadores | `[a-zA-Z_][a-zA-Z0-9_]*` |
 | Literais inteiros | `[0-9]+` |
 | Operadores aritméticos | `+`, `-`, `*`, `/`, `%` |
@@ -64,7 +65,7 @@ comentários       → '//' até o fim da linha
 ## 3. Regras Semânticas
 
 ### 3.1 Escopo e Declaração
-- Toda variável (`ID`) deve ser declarada com `var` antes de qualquer leitura ou atribuição.
+- Toda variável (`ID`) deve ser declarada com `int` ou `bool` antes de qualquer leitura ou atribuição.
 - Não há escopos aninhados: todas as declarações são globais à função principal.
 
 ### 3.2 Verificação de Tipos (Type Checking)
