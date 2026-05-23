@@ -1,0 +1,109 @@
+   0.026592093s  INFO prepare_target{force=false package_id=PBLang v0.1.0 (/home/belem/Workspace/PBLang) target="PBLang"}: cargo::core::compiler::fingerprint: fingerprint error for PBLang v0.1.0 (/home/belem/Workspace/PBLang)/Check { test: false }/TargetInner { name: "PBLang", doc: true, ..: with_path("/home/belem/Workspace/PBLang/src/main.rs", Edition2024) }
+   0.026610303s  INFO prepare_target{force=false package_id=PBLang v0.1.0 (/home/belem/Workspace/PBLang) target="PBLang"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/belem/Workspace/PBLang/target/debug/.fingerprint/PBLang-d91a59d537681bfa/bin-PBLang`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <E as anyhow::context::ext::StdError>::ext_context
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::prepare_target
+   3: cargo::core::compiler::compile
+   4: cargo::core::compiler::build_runner::BuildRunner::compile
+   5: cargo::ops::cargo_compile::compile_ws
+   6: cargo::ops::cargo_compile::compile_with_exec
+   7: cargo::ops::cargo_compile::compile
+   8: cargo::commands::check::exec
+   9: cargo::cli::Exec::exec
+  10: cargo::cli::main
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace
+  13: std::rt::lang_start::{{closure}}
+  14: std::rt::lang_start_internal
+  15: main
+  16: __libc_start_call_main
+  17: __libc_start_main@@GLIBC_2.34
+  18: _start
+   0.034666018s  INFO prepare_target{force=false package_id=inkwell v0.9.0 (https://github.com/TheDan64/inkwell?branch=master#5756ac06) target="inkwell"}: cargo::core::compiler::fingerprint: fingerprint error for inkwell v0.9.0 (https://github.com/TheDan64/inkwell?branch=master#5756ac06)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("inkwell", ["lib"], "/home/belem/Workspace/PBLang/~/.cargo/git/checkouts/inkwell-511a88971ace534e/5756ac0/src/lib.rs", Edition2024) }
+   0.034678388s  INFO prepare_target{force=false package_id=inkwell v0.9.0 (https://github.com/TheDan64/inkwell?branch=master#5756ac06) target="inkwell"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/belem/Workspace/PBLang/target/debug/.fingerprint/inkwell-f78adec4e91cfde2/lib-inkwell`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <E as anyhow::context::ext::StdError>::ext_context
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::prepare_target
+   3: cargo::core::compiler::compile
+   4: cargo::core::compiler::compile
+   5: cargo::core::compiler::build_runner::BuildRunner::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: cargo::cli::Exec::exec
+  11: cargo::cli::main
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace
+  14: std::rt::lang_start::{{closure}}
+  15: std::rt::lang_start_internal
+  16: main
+  17: __libc_start_call_main
+  18: __libc_start_main@@GLIBC_2.34
+  19: _start
+   0.035881487s  INFO prepare_target{force=false package_id=llvm-sys v181.3.0 target="llvm_sys"}: cargo::core::compiler::fingerprint: fingerprint error for llvm-sys v181.3.0/Check { test: false }/TargetInner { ..: lib_target("llvm_sys", ["lib"], "/home/belem/Workspace/PBLang/~/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/llvm-sys-181.3.0/src/lib.rs", Edition2015) }
+   0.035893017s  INFO prepare_target{force=false package_id=llvm-sys v181.3.0 target="llvm_sys"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/belem/Workspace/PBLang/target/debug/.fingerprint/llvm-sys-8564c59f87ef9efd/lib-llvm_sys`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <E as anyhow::context::ext::StdError>::ext_context
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::prepare_target
+   3: cargo::core::compiler::compile
+   4: cargo::core::compiler::compile
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::build_runner::BuildRunner::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: cargo::cli::Exec::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace
+  15: std::rt::lang_start::{{closure}}
+  16: std::rt::lang_start_internal
+  17: main
+  18: __libc_start_call_main
+  19: __libc_start_main@@GLIBC_2.34
+  20: _start
+   0.036468137s  INFO prepare_target{force=false package_id=PBLang v0.1.0 (/home/belem/Workspace/PBLang) target="PBLang"}: cargo::core::compiler::fingerprint: fingerprint error for PBLang v0.1.0 (/home/belem/Workspace/PBLang)/Check { test: true }/TargetInner { name: "PBLang", doc: true, ..: with_path("/home/belem/Workspace/PBLang/src/main.rs", Edition2024) }
+   0.036476217s  INFO prepare_target{force=false package_id=PBLang v0.1.0 (/home/belem/Workspace/PBLang) target="PBLang"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/belem/Workspace/PBLang/target/debug/.fingerprint/PBLang-c21c57b6856d1e9a/test-bin-PBLang`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <E as anyhow::context::ext::StdError>::ext_context
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::prepare_target
+   3: cargo::core::compiler::compile
+   4: cargo::core::compiler::build_runner::BuildRunner::compile
+   5: cargo::ops::cargo_compile::compile_ws
+   6: cargo::ops::cargo_compile::compile_with_exec
+   7: cargo::ops::cargo_compile::compile
+   8: cargo::commands::check::exec
+   9: cargo::cli::Exec::exec
+  10: cargo::cli::main
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace
+  13: std::rt::lang_start::{{closure}}
+  14: std::rt::lang_start_internal
+  15: main
+  16: __libc_start_call_main
+  17: __libc_start_main@@GLIBC_2.34
+  18: _start
+    Checking llvm-sys v181.3.0
+error: could not compile `llvm-sys` (lib) due to 1 previous error
