@@ -2,6 +2,8 @@ mod error;
 mod lexer;
 mod ast;
 mod parser;
+mod symbol_table;
+mod semantic;
 
 use std::{env, fs, process};
 
@@ -51,8 +53,18 @@ fn main() {
         println!("=== AST ===\n{:#?}", ast);
     }
 
-    // Fases C–F: próximas iterações
+    // ── Fase C — Análise Semântica ────────────────────────────────────────
+    let _tabela = match semantic::verificar(&ast) {
+        Ok(tabela) => tabela,
+        Err(errors) => {
+            for err in &errors { eprintln!("{}", err); }
+            process::exit(1);
+        }
+    };
+
+    // Fases D–F: próximas iterações
     println!("[Fase A] OK — lexer");
     println!("[Fase B] OK — {} declarações, {} comandos",
         ast.declaracoes.len(), ast.comandos.len());
+    println!("[Fase C] OK — análise semântica");
 }
