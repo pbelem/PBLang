@@ -112,7 +112,7 @@ impl Analisador {
         condicao: &Expressao,
         entao: &[Comando],
         senao: Option<&[Comando]>,
-        span: &Span,
+        _span: &Span,
     ) {
         self.exigir_bool(condicao, "condição do 'if'");
         for cmd in entao { self.verificar_comando(cmd); }
@@ -124,7 +124,7 @@ impl Analisador {
     /// `while ( condição ) bloco`
     ///
     /// A condição deve ser `bool`.
-    fn verificar_while(&mut self, condicao: &Expressao, corpo: &[Comando], span: &Span) {
+    fn verificar_while(&mut self, condicao: &Expressao, corpo: &[Comando], _span: &Span) {
         self.exigir_bool(condicao, "condição do 'while'");
         for cmd in corpo { self.verificar_comando(cmd); }
     }

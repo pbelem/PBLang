@@ -40,6 +40,7 @@
           libffi
           zlib
           ncurses      # exigido por certas features do LLVM no linking
+          libxml2
         ];
 
         commonEnv = {

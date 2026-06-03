@@ -155,7 +155,7 @@ impl Parser {
 
     /// `declaração → 'var' ID ':' tipo ';'`
     fn parse_declaracao(&mut self) -> Option<Declaracao> {
-        let (line, col) = self.current_pos();
+        let (_line, _col) = self.current_pos();
         self.expect(&Token::Var);                          // 'var'
 
         let (nome, span) = self.expect_ident()?;           // ID
@@ -782,6 +782,8 @@ mod tests {
             }
         "#;
         let prog = parse_ok(src);
+        // O programa tem exatamente 2 comandos: i=0 (índice 0) e while (índice 1)
+        assert_eq!(prog.comandos.len(), 2);
         assert!(matches!(&prog.comandos[1], Comando::While { .. }));
     }
 
